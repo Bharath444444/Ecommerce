@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spicy Jeans</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Spicy Jeans</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="welcome.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h1>Welcome to Our Online Store</h1>
+        <p>Shop the best fashion trends at great prices!</p>
+    </section>
+
+    <!-- Category Cards -->
+    <section class="categories">
+        <div class="card" >
+            <img src="images/shirt.avif" alt="Shirts">
+            <a href="shirts.html">Shirts</a>
+        </div>
+        <div class="card">
+            <img src="images/tshirt.jpg" alt="T-Shirts">
+            <a href="tshirts.html">T-Shirts</a>
+        </div>
+        <div class="card">
+            <img src="images/jeans.jpg" alt="Jeans">
+            <a href="jeans.html">Jeans</a>
+        </div>
+        <div class="card">
+            <img src="images/hoodie.jpg" alt="Hoodies">
+            <a href="hoodies.html">Hoodies</a>
+        </div>
+        <div class="card">
+            <img src="images/sneakers.webp" alt="Sneakers">
+            <a href="sneakers.html">Sneakers</a>
+        </div>
+        <div class="card">
+            <img src="images/sandals.jpg" alt="Sandals">
+            <a href="sandals.html">Sandals</a>
+        </div>
+    </section>
+    <section class="faq-section">
+        <h1 class="faq-title">Frequently Asked Questions</h1>
+        <div class="faq-container">
+          
+          <!-- Question 1 -->
+          <div class="faq-item">
+            <input type="checkbox" id="faq1">
+            <label for="faq1" class="faq-question">1.How can I place an order on your website?</label>
+            <p class="faq-answer">
+                To place an order, browse our product categories, select the item you want, and click "Add to Cart." Once you're ready, proceed to checkout, enter your shipping details, and complete the payment. 
+            </p>
+          </div>
+    
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <input type="checkbox" id="faq2">
+            <label for="faq2" class="faq-question">2.What payment methods do you accept?</label>
+            <p class="faq-answer">
+                We accept various payment methods, including credit/debit cards, PayPal, UPI, and net banking. All transactions are secure and encrypted for your safety.
+            </p>
+          </div>
+    
+          <!-- Question 3 -->
+          <div class="faq-item">
+            <input type="checkbox" id="faq3">
+            <label for="faq3" class="faq-question">3.How long does shipping take?</label>
+            <p class="faq-answer">
+                Shipping times vary based on your location and selected shipping method. Standard delivery usually takes 5-7 business days, while express shipping takes 2-3 business days. 
+            </p>
+          </div>
+    
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <input type="checkbox" id="faq4">
+            <label for="faq4" class="faq-question">4.Can I return or exchange a product?</label>
+            <p class="faq-answer">
+                Yes, we offer a 7-day return and exchange policy. If you're not satisfied with your purchase, you can request a return or exchange, provided the item is unused and in its original packaging.
+            </p>
+          </div>
+    
+          <!-- Question 5 -->
+          <div class="faq-item">
+            <input type="checkbox" id="faq5">
+            <label for="faq5" class="faq-question">5.How can I track my order?</label>
+            <p class="faq-answer">
+              Once your order is shipped, you'll receive an email with a tracking number and a link to track your package in real time
+            </p>
+          </div>
+    
+        
+          
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-left">
+            <p>&copy; 2025 Spicy jeans. All Rights Reserved.</p>
+          </div>
+          <div class="footer-right">
+            <ul>
+              <li><a href="welcome.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="social-link">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-link">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-link">
+                <img src="images/insta.avif" alt="Instagram">
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-link">
+                <img src="images/linked.png" alt="LinkedIn">
+            </a>
+        </div>
+        </div>
+      </footer>
+
+    <script>
+        function toggleMenu() {
+            var navLinks = document.querySelector(".nav-links");
+            navLinks.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

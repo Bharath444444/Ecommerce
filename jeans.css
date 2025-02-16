@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #545353;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #222;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Page Heading */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Products Section */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 cards per row on large screens */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Product Card */
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h2 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #555;
+}
+
+.product-card s {
+    color: #999;
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+
+.product-card strong {
+    color: #e63946;
+    font-size: 1.2rem;
+}
+
+/* View Details Button */
+.product-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ff7c7c;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.product-card a:hover {
+    background: #e63946;
+}
+
+/* Hover Effects */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.footer {
+    background-color: #545353; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Center the content */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Footer Container */
+  .footer-container {
+    
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Footer Left */
+  .footer-left {
+    font-size: 1rem;
+    margin-bottom:30px;
+  }
+  
+  /* Footer Right */
+  .footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+  }
+  
+  .footer-right ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .footer-right ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-right ul li a:hover {
+    color: #ff7c7c;
+  }
+  .social-link img {
+    width: 40px;  
+    height: 40px;
+    border-radius: 50%;  
+    transition: transform 0.3s ease; 
+  }
+  .social-link img:hover {
+    transform: scale(1.1); 
+  }
+  
+  .social-link {
+    text-decoration: none; 
+  }
+  
+/* Responsive Design */
+@media (max-width: 992px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(1, 1fr);  /* 1 column per row */
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #545353;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

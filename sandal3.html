@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="sandal1.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="logo">Spicy Jeans</div>
@@ -18,53 +20,57 @@
         </ul>
     </nav>
     <div class="product-details">
-        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/sandal/e/a/7/-original-imah4h8qgpjnc3yq.jpeg?q=70" alt="Puma Sandals">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/sandal/e/a/7/-original-imah4h8qgpjnc3yq.jpeg?q=70"
+            alt="Puma Sandals">
         <div class="details">
             <h2>Puma</h2>
             <p>Breathable and water-resistant sandals for all-day wear.</p>
             <p>Size: 8,9,10,11</p>
             <p><s>₹4700</s> <strong>₹3290</strong></p>
-            
+
             <div class="offers">
                 <h3>Available Offers</h3>
                 <ul>
-                    <li><strong>Bank Offer:</strong> 5% Unlimited Cashback on  Axis Bank Credit Card</li>
-                    <li><strong>Bank Offer:</strong> Flat ₹500 off on RuPay Credit Card EMI Transactions, on orders of ₹15,000 and above</li>
-                    <li><strong>Bank Offer:</strong> 10% off up to ₹1,200 on HDFC Bank Credit Card EMI on 6 and 9 months tenure. Min Txn Value: ₹5000</li>
-                    <li><strong>Bank Offer:</strong> 10% off up to ₹1,500 on HDFC Bank Credit Card EMI on 12 months and above tenure. Min Txn Value: ₹5000</li>
+                    <li><strong>Bank Offer:</strong> 5% Unlimited Cashback on Axis Bank Credit Card</li>
+                    <li><strong>Bank Offer:</strong> Flat ₹500 off on RuPay Credit Card EMI Transactions, on orders of
+                        ₹15,000 and above</li>
+                    <li><strong>Bank Offer:</strong> 10% off up to ₹1,200 on HDFC Bank Credit Card EMI on 6 and 9 months
+                        tenure. Min Txn Value: ₹5000</li>
+                    <li><strong>Bank Offer:</strong> 10% off up to ₹1,500 on HDFC Bank Credit Card EMI on 12 months and
+                        above tenure. Min Txn Value: ₹5000</li>
                 </ul>
             </div>
-            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+            <button id="addToCart" class="add-to-cart">Add to Cart</button>
         </div>
     </div>
     <footer class="footer">
         <div class="footer-container">
-          <div class="footer-left">
-            <p>&copy; 2025 Spicy Jeans. All Rights Reserved.</p>
-          </div>
-          <div class="footer-right">
-            <ul>
-              <li><a href="welcome.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" class="social-link">
-                <img src="images/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://twitter.com" target="_blank" class="social-link">
-                <img src="images/twitter.png" alt="Twitter">
-            </a>
-            <a href="https://instagram.com" target="_blank" class="social-link">
-                <img src="images/insta.avif" alt="Instagram">
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="social-link">
-                <img src="images/linked.png" alt="LinkedIn">
-            </a>
+            <div class="footer-left">
+                <p>&copy; 2025 Spicy Jeans. All Rights Reserved.</p>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><a href="welcome.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="social-link">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-link">
+                    <img src="images/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-link">
+                    <img src="images/insta.avif" alt="Instagram">
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-link">
+                    <img src="images/linked.png" alt="LinkedIn">
+                </a>
+            </div>
         </div>
-        </div>
-      </footer>
+    </footer>
 
     <script>
         function toggleMenu() {
@@ -72,5 +78,34 @@
             navLinks.classList.toggle("active");
         }
     </script>
+    <script>
+        document.getElementById("addToCart").addEventListener("click", function () {
+            // Define the product details
+            const product = {
+                name: "Puma Sandals",
+                price: 3290,
+                image: "https://rukminim2.flixcart.com/image/612/612/xif0q/sandal/e/a/7/-original-imah4h8qgpjnc3yq.jpeg?q=70",
+                quantity: 1
+            };
+
+
+            // Get the cart from localStorage or create an empty array
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Check if the product is already in the cart
+            let existingProduct = cart.find(item => item.name === product.name);
+            if (existingProduct) {
+                existingProduct.quantity += 1; // Increase quantity if product exists
+            } else {
+                cart.push(product); // Add new product
+            }
+
+            // Save updated cart back to localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Product added to cart!"); // Confirmation alert
+        });
+    </script>
 </body>
+
 </html>

@@ -34,7 +34,7 @@
                     <li><strong>Bank Offer:</strong> 10% off up to ₹1,500 on HDFC Bank Credit Card EMI on 12 months and above tenure. Min Txn Value: ₹5000</li>
                 </ul>
             </div>
-            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+            <button id="addToCart" class="add-to-cart">Add to Cart</button>
         </div>
     </div>
     <footer class="footer">
@@ -71,6 +71,33 @@
             var navLinks = document.querySelector(".nav-links");
             navLinks.classList.toggle("active");
         }
+    </script>
+    <script>
+        document.getElementById("addToCart").addEventListener("click", function () {
+            // Define the product details
+            const product = {
+    name: "Veirdo T-Shirt",
+    price: 2800,
+    image: "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/u/t/6/xl-os-100-cork-veirdo-original-imah8vdhjkcsxgtp.jpeg?q=70",
+    quantity: 1
+};
+
+            // Get the cart from localStorage or create an empty array
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Check if the product is already in the cart
+            let existingProduct = cart.find(item => item.name === product.name);
+            if (existingProduct) {
+                existingProduct.quantity += 1; // Increase quantity if product exists
+            } else {
+                cart.push(product); // Add new product
+            }
+
+            // Save updated cart back to localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Product added to cart!"); // Confirmation alert
+        });
     </script>
 </body>
 </html>

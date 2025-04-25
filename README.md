@@ -1,1 +1,1 @@
-#simple ecommerce platform design
+simple ecommerce platform design

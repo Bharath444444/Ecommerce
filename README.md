@@ -1,2 +1,2 @@
-Simple ecommerce platform design 
+Simple ecommerce platform designed
 with HTML AND CSS

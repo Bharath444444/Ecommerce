@@ -1,2 +1,2 @@
 Simple ecommerce platform designed
-with HTML AND CSS
+with HTML&CSS
